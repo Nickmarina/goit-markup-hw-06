@@ -636,6 +636,19 @@ address .item{
     transition: fill 250ms var(--timing-cubic);
 }
 
+.close-button{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    background-color: var(--white-color);
+}
+
 .close-button:hover .icon,
 .close-button:focus .icon{
     fill: var(--selection-color);
@@ -689,7 +702,7 @@ address .item{
     box-sizing: border-box;
     border-radius: 4px;
 
-    transform: border 250ms var(--timing-cubic);
+    transition: border 250ms var(--timing-cubic);
 }
 
 .form-input:focus{
@@ -706,6 +719,10 @@ address .item{
     height: 18px;
 }
 
+.form-input:focus + .form-field-icon{
+    fill: var(--selection-color);
+}
+
 .form-textarea{
     resize: none;
     width: 100%;
@@ -716,7 +733,7 @@ address .item{
     border-radius: 4px;
     margin-bottom: 20px;    
     
-    transform: border 250ms var(--timing-cubic);
+    transition: border 250ms var(--timing-cubic);
 }
 
 .form-textarea:focus {
@@ -725,7 +742,7 @@ address .item{
     outline: none;
 }
 
-.form-field-textarea::placeholder{
+.form-textarea::placeholder{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
@@ -792,17 +809,9 @@ address .item{
     line-height: 1.9 ;
 } 
 
-.close-button{
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 15px;
-    background-color: var(--white-color);
+.submit-btn:hover,
+.submit-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 
