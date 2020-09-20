@@ -337,9 +337,9 @@
                 </ul>
             </section>
             <form class="mail-form">
-                    <label for="mail">Подпишитесь на рассылку</label>
+                    <label for="email">Подпишитесь на рассылку</label>
                     <div class="field">
-                        <input type="email" name="mail" id="mail" placeholder="E-mail"/>
+                        <input type="email" name="mail" id="email" placeholder="E-mail"/>
                         <button type="submit"><span class="btn-title">Подписаться</span></button>
                     </div>
             </form>
@@ -351,50 +351,41 @@
                 <div class="main-section">
                     <b>Оставьте свои данные, мы вам перезвоним</b>
                 
-                    <label>
-                        <span class="form-title">Имя</span>
-                        <div class="form-field"> 
-                            <svg class="icon">
-                                <use href="../images/sprite.svg#icon-person-black"></use>
-                            </svg>
-                            <input type="text" name="name" placeholder=" "> 
-                        </div>
-                    </label>
+                    <label for="name" class="form-title">Имя</label>
+                    <div class="form-field"> 
+                        <svg class="icon">
+                            <use href="../images/sprite.svg#icon-person-black"></use>
+                        </svg>
+                        <input type="text" name="name" id="name" placeholder=" "> 
+                    </div>
                     
-                    <label>
-                        <span class="form-title">Телефон</span> 
-                        <div class="form-field"> 
-                            <svg class="icon">
-                                <use href="../images/sprite.svg#icon-phone-black"></use>
-                            </svg>
-                            <input type="tel" name="phone" placeholder=" " >
-                        </div>
-                    </label>
+                    <label for="phone" class="form-title">Телефон</label>
+                    <div class="form-field"> 
+                        <svg class="icon">
+                            <use href="../images/sprite.svg#icon-phone-black"></use>
+                        </svg>
+                        <input type="tel" name="phone" id="phone" placeholder=" " >
+                    </div>
                     
-                    <label>
-                        <span class="form-title">Почта</span>
-                            <div class="form-field"> 
-                                <svg class="icon">
-                                    <use href="../images/sprite.svg#icon-email-black"></use>
-                                </svg>
-                                <input type="email" name="mail">
-                            </div>
-                    </label>
+                    <label for="mail" class="form-title">Почта</label>
+                    <div class="form-field"> 
+                        <svg class="icon">
+                            <use href="../images/sprite.svg#icon-email-black"></use>
+                        </svg>
+                        <input type="email" name="mail" id="mail">
+                    </div>
                     
                     <label>
                         <span class="form-title">Комментарий</span>
-                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                        <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
                     </label>
                 </div>
                 
-                <label>
-                    <div class="checkbox-field">
-                        <input type="checkbox" class="checkbox visually-hidden" value="rulles">
-                        <span class="icon"></span>
-                        <p>Соглашаюсь с рассылкой и принимаю <a href=""><span class="checkbox-text">Условия договора</span></a></p>
-                    </div>
-                </label>
-
+                <label for="checkbox" class="checkbox-field"></label>
+                <input type="checkbox" class="checkbox visually-hidden" id="checkbox" value="rulles">
+                <span class="icon"></span>
+                <p>Соглашаюсь с рассылкой и принимаю <a href=""><span class="checkbox-text">Условия договора</span></a></p>
+                
                 <button type="submit" class="submit-btn">Отправить</button>
             </form>
 
