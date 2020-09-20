@@ -726,14 +726,18 @@ textarea::placeholder{
 }
 
 .checkbox-field{
-    display: inline-flex;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width:100%;
-    margin-bottom: 30px;
+    
+    /* width: 100%; */
 }
 
-.checkbox-field>p{
+.checkbox-field>label{
+    display: inline-flex;
+    align-items: center;
+}
+
+.checkbox-field .text{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -749,7 +753,7 @@ textarea::placeholder{
     border-radius: 2px;
 }
 
-.checkbox:checked +.icon{
+.checkbox:checked ~.icon{
     background-color: var(--selection-color);
     border-color: var(--selection-color);    
     background-image: url(../images/main-page/Vector.svg);
@@ -767,6 +771,7 @@ textarea::placeholder{
 .modal-form>.submit-btn{
     position: absolute;
     left: 165px;
+    bottom: 40px;
     width: 200px;
     height: 50px;
     background-color: var(--selection-color);
