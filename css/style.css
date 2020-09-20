@@ -627,21 +627,18 @@ address .item{
     transition: transform 250ms var(--timing-cubic); 
 }
 
-.modal>.close-button{
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--white-color);
-}
 
 .modal .icon{
     width: 100%;
     height: 100%;
     text-align: center;
+
+    transition: fill 250ms var(--timing-cubic);
+}
+
+.close-button:hover .icon,
+.close-button:focus .icon{
+    fill: var(--selection-color);
 }
 
 .modal-form{
@@ -666,11 +663,8 @@ address .item{
     letter-spacing: 0.03em;
 }
 
-.modal-form label{
-    display: block;
 
-}
-.form-title{
+.form-label{
     display:inline-block;
     margin-bottom: 4px;
     font-size: 12px;
@@ -681,54 +675,70 @@ address .item{
 
 .form-field{
     position: relative;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
 }
 
-.form-field:not(:placeholder-shown):focus ~ .form-field>.icon{
-    fill: var(--selection-color);
-    border: 1px solid var(--selection-color);
-}
-
-.form-field>input{
-    display: block;
+.form-input{
+    margin-bottom: 14px;
     padding-left: 40px;
     width:100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+
+    transform: border 250ms var(--timing-cubic);
 }
 
-.form-field .icon{
+.form-input:focus{
+    border: 1px solid var(--selection-color);
+    border-width: 1px;
+    outline: none;
+}
+
+.form-field-icon{
     position: absolute;
-    top: 11px;
-    left: 12px;
+    top: 25px;
+    left: 14px;
     width: 18px;
     height: 18px;
 }
 
-textarea{
+.form-textarea{
     resize: none;
     width: 100%;
     height: 120px;
     padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
+    border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    margin-bottom: 20px;    
     
+    transform: border 250ms var(--timing-cubic);
 }
 
-textarea::placeholder{
+.form-textarea:focus {
+    border: 1px solid var(--selection-color);
+    border-width: 1px;
+    outline: none;
+}
+
+.form-field-textarea::placeholder{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
 
+/* .form-textarea:not(:placeholder-shown):focus{
+    border-color: var(--selection-color);
+} */
+
 .checkbox-field{
     display: flex;
     justify-content: center;
-    
     width: 100%;
 }
 
@@ -768,14 +778,13 @@ textarea::placeholder{
 }
 
 
-.modal-form>.submit-btn{
+.submit-btn{
     position: absolute;
     left: 165px;
     bottom: 40px;
     width: 200px;
     height: 50px;
     background-color: var(--selection-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: var(--white-color);
     font-weight: 700;
@@ -783,7 +792,18 @@ textarea::placeholder{
     line-height: 1.9 ;
 } 
 
-
+.close-button{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    background-color: var(--white-color);
+}
 
 
 /* PORTFOLIO */

@@ -351,34 +351,36 @@
                 <div class="main-section">
                     <b>Оставьте свои данные, мы вам перезвоним</b>
                 
-                    <label for="name" class="form-title">Имя</label>
+                   
                     <div class="form-field"> 
-                        <svg class="icon">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" name="name" id="name" class="form-input" placeholder=" "> 
+                        <svg class="form-field-icon">
                             <use href="./images/sprite.svg#icon-person-black"></use>
-                        </svg>
-                        <input type="text" name="name" id="name" placeholder=" "> 
+                        </svg> 
                     </div>
                     
-                    <label for="phone" class="form-title">Телефон</label>
+                    
                     <div class="form-field"> 
-                        <svg class="icon">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="tel" name="phone" id="phone" class="form-input" placeholder=" " >
+                        <svg class="form-field-icon">
                             <use href="./images/sprite.svg#icon-phone-black"></use>
-                        </svg>
-                        <input type="tel" name="phone" id="phone" placeholder=" " >
+                        </svg>   
                     </div>
                     
-                    <label for="mail" class="form-title">Почта</label>
                     <div class="form-field"> 
-                        <svg class="icon">
+                        <label for="mail" class="form-label">Почта</label>
+                        <input type="email" name="mail" id="mail" class="form-input">
+                        <svg class="form-field-icon">
                             <use href="./images/sprite.svg#icon-email-black"></use>
                         </svg>
-                        <input type="email" name="mail" id="mail">
+                        
                     </div>
                     
-                    <label>
-                        <span class="form-title">Комментарий</span>
-                        <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
-                    </label>
+                    <div class="form-field">
+                        <label for="comment" class="form-label">Комментарий</label>
+                        <textarea name="comment" id="comment" class="form-textarea" clasplaceholder="Введите текст"></textarea>
                 </div>
                 
                 <div class="checkbox-field">
