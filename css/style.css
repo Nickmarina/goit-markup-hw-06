@@ -729,7 +729,7 @@ textarea::placeholder{
     display: flex;
     justify-content: center;
     
-    /* width: 100%; */
+    width: 100%;
 }
 
 .checkbox-field>label{
